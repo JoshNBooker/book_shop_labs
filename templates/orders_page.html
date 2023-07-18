@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='your_file_name.css') }}"/>
+
+</head>
+<body>
+    <main>
+        <h1><strong>{{ title }}</strong></h1>
+        <h4>See a list of your current orders below:</h4>
+        <ul>
+        {% for order in current_orders %}
+            <li><b>Order number:</b> {{loop.index}}</li>
+            <li><b>Customer Name: </b>{{ order.customer_name }} </li>
+            <li><b>Order Date: </b> {{ order.order_date }} </li>
+            <li><b>Quantity: </b> {{ order.quantity }} </li>
+            <li><b>Title: </b> {{ order.book_title }} <a href="/orders/{{loop.index-1}}">Click here for more information</a></li>
+            <br>
+        {% endfor %}
+        </ul>
+    </main>
+</body>
+</html>
