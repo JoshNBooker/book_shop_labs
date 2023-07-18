@@ -7,17 +7,28 @@
     <title>{{ title }}</title>
 </head>
 <body>
-    <header class="welcome"><h1>Welcome to my bookshop!</h1></header>
+    <header id="welcome_container">
+        <h1 class="welcome__message">Welcome to Josh's Bookshop of wonders!</h1>
+        <ul id="welcome__list">
+            <div class="dropdown">
+                <button class="dropbtn">Menu</button>
+                <div class="dropdown-content">
+                    <a href="#">Browse</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </ul>
+    </header>
     <main>
-        <nav>
-            <header><h1>Menu</h1></header>
-                <ul>
-                    <li>
-                        <a href="/orders">Orders Page</a>
-                    </li>
-                </ul>
-
-        </nav>
+        <header class="about">
+            <h3 class="about__title">A little bit about us...</h3>
+        </header>
+        <article class="about__content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Doloribus ex quas consequuntur voluptates omnis architecto a quis rem odio, id exercitationem. 
+            Blanditiis, tenetur nemo! Ullam velit voluptates mollitia officia itaque?
+        </article>
     </main>
 </body>
 </html>
